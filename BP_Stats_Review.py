@@ -10,7 +10,7 @@ import pandas as pb
 file = pb.read_excel('bp-stats-review-2019-all-data.xlsx', sheet_name = 'Primary Energy Consumption', hearders = 2, skiprows=2, usecols=range(55)).dropna(axis=0,how='all')
 
 #Find the lines for each categorie (in terms of Region)
-Places = file[~file['Million tonnes oil equivalent'].str.startswith('Total')]
+Places = file[~file['Million tonnes oil equivalent'].str.startswith('Total')].iloc[:-9]
 
 #Find only the Total values
 Total_Countries = file[file['Million tonnes oil equivalent'].str.startswith('Total')]
