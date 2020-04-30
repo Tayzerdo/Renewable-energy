@@ -2,4 +2,4 @@
 
 This project is based on study of energy in general based on the BP statistical review.
 
-webiste - https://www.bp.com/en/global/corporate/energy-economics/statistical-review-of-world-energy.html
+webiste - https://www.bp.com/content/dam/bp/business-sites/en/global/corporate/xlsx/energy-economics/statistical-review/bp-stats-review-2019-all-data.xlsx
