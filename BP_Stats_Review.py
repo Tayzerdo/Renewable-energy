@@ -6,6 +6,9 @@ Created on Wed Apr 29 12:47:51 2020
 """
 import pandas as pb
 import matplotlib.pyplot as plt
+from sklearn.linear_model import LinearRegression
+from sklearn.preprocessing import PolynomialFeatures
+from sklearn.model_selection import train_test_split 
 
 ###Excel file
 #https://www.bp.com/content/dam/bp/business-sites/en/global/corporate/xlsx/energy-economics/statistical-review/bp-stats-review-2019-all-data.xlsx
