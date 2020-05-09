@@ -61,16 +61,26 @@ Countries_Renew_Total.set_index('Terawatt-hours', inplace=True)
 #build the Linear plot regression by region
 df=Countries_Renew_Total.drop(['Total World']).transpose()
 n=0
+
 for j in df.columns:
     print('The region is: '+j)
     for i in range(1,3):
+        #import the dataset
         x=df.index.values.reshape(-1,1)
         y=df.iloc[:,int(n)].values.reshape(-1,1)
-        x_train, x_test, y_train, y_test = train_test_split(x,y,test_size=0.2,random_state=0)
+        
+        #Fit the linear regression
+        lin=LinearRegression()
+        lin.fit(x,y)
+        
+        #Fit the Poly regression
         poly = PolynomialFeatures(degree = i)
         x_poly = poly.fit_transform(x)
+        poly.fit(x_poly,y)
         lin2=LinearRegression()
         lin2.fit(x_poly,y)
+        
+        #Plot Poly regression
         plt.scatter(x,y,color='blue')
         plt.plot(x,lin2.predict(poly.fit_transform(x)),color='red')
         plt.title('Polynomial Regression degree '+str(i))
@@ -79,4 +89,4 @@ for j in df.columns:
         plt.show()
         print(lin2.predict(poly.fit_transform([[2019]])))
         print(lin2.predict(poly.fit_transform([[2020]])))
-    n=+1
+    n=n+1
