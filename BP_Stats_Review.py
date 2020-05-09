@@ -10,23 +10,24 @@ from sklearn.linear_model import LinearRegression
 from sklearn.preprocessing import PolynomialFeatures
 from sklearn.model_selection import train_test_split 
 
-###Excel file
+#####Excel file
 #https://www.bp.com/content/dam/bp/business-sites/en/global/corporate/xlsx/energy-economics/statistical-review/bp-stats-review-2019-all-data.xlsx
 test = pd.read_excel('bp-stats-review-2019-all-data.xlsx')
 
-###Worksheet names
+#####Worksheet names
 Worksheet_names = test.iloc[:,0].tolist()
 #print(Worksheet_names)
 
-###Worksheet Electricity generation - TWh (from 1985)
+#####Worksheet Electricity generation - TWh (from 1985)
 file = pd.read_excel('bp-stats-review-2019-all-data.xlsx', sheet_name = 'Elec Gen by fuel', headers = 2, skiprows=2, usecols = range(17)).dropna(axis=0,how='all').iloc[:-6]
+file.fillna('0',inplace=True)
 #print(file)
 
-#Find the lines for each categorie (in terms of Region)
+###Find the lines for each categorie (in terms of Region)
 Countries = file[~file['Terawatt-hours'].str.startswith('Total')].sort_values(['Terawatt-hours'])
 #print(type(Countries))    
 
-#Find Total values for region
+###Find Total values for region
 Total_Countries = file[file['Terawatt-hours'].str.startswith('Total')].sort_values(['Terawatt-hours'])
 Total_Countries.set_index('Terawatt-hours', inplace=True)
 
@@ -43,18 +44,17 @@ for i in fuels_name:
     plt.show()
 
     
-####Worksheet Renewables: Generation*
-##Renewables - TWh
+#####Worksheet Renewables: Generation*
 Renew = pd.read_excel('bp-stats-review-2019-all-data.xlsx', sheet_name = 'Renewables - TWh', headers = 2, skiprows=2, usecols = range(55)).dropna(axis=0,how='all').iloc[:-10]
 Renew.fillna('0',inplace=True)
 #print(Renew)
 
-#Taking only the countries
+###Taking only the countries
 Countries_Renew = Renew[~Renew['Terawatt-hours'].str.startswith('Total')].sort_values(['Terawatt-hours'])
 Countries_Renew.set_index('Terawatt-hours', inplace=True)
 #print(Countries_Renew.head())    
 
-#Taking only the Totals
+###Taking only the Totals
 Countries_Renew_Total = Renew[Renew['Terawatt-hours'].str.startswith('Total')].sort_values(['Terawatt-hours'])
 Countries_Renew_Total.set_index('Terawatt-hours', inplace=True)
 
