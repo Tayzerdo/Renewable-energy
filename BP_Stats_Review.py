@@ -87,6 +87,5 @@ for j in df.columns:
         plt.xlabel('Year')
         plt.ylabel('Renewable Generation (TWh)')
         plt.show()
-        print(lin2.predict(poly.fit_transform([[2019]])))
-        print(lin2.predict(poly.fit_transform([[2020]])))
+
     n=n+1
