@@ -222,7 +222,7 @@ for i in range(0,len(Countries)):
 a['Regions'] = y
 
 a.set_index('Regions',inplace=True)
-a.to_csv('table.xlsx')
+a.to_excel('table.xlsx')
 Total_Countries_Corr = a
 
 ### 5. Correlation graphs for each energy type using scatter plots
@@ -240,7 +240,6 @@ for i in range(0,len(b.columns)):
 
 #Create the scatter plot for type of energy with the correlation for all the regions
 for j in range(0,len(energy)-1):
-    print(j)
     plt.scatter(b[energy[j]],b.index, alpha=0.5, c=dicts[energy[j]])
     plt.title(f'{energy[i]} correlation with Carbon Emission')
     plt.xticks(x)
