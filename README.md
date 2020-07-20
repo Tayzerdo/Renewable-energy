@@ -9,8 +9,8 @@ webiste - https://www.bp.com/content/dam/bp/business-sites/en/global/corporate/x
 ## The file has sort of energy information: the ones used for this project is:
 
 ##### Oil Production - Tonnes > displays the oil production in Tonnes from 1965 til 2018
-##### Gas Production - Mtoe > displays the oil production in Mtoe from 1970 til 2018
-##### Coal Production - Mtoe > displays the oil production in Mtoe from 1981 til 2018
+##### Gas Production - Mtoe > displays the gas production in Mtoe from 1970 til 2018
+##### Coal Production - Mtoe > displays the coal production in Mtoe from 1981 til 2018
 ##### Nuclear Generation - TWh > displays the nuclear generation in TWh from 1965 til 2018
 ##### Hydro Generation - TWh > displays the hydro generation in TWh from 1965 til 2018
 ##### Solar Generation - TWh > displays the solar generation in TWh from 1965 til 2018
