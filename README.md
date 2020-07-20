@@ -16,5 +16,5 @@ webiste - https://www.bp.com/content/dam/bp/business-sites/en/global/corporate/x
 ##### Solar Generation - TWh > displays the solar generation in TWh from 1965 til 2018
 ##### Wind Generation - TWh > displays the wind generation in TWh from 1965 til 2018
 ##### Geo Biomass Other - TWh > displays the geo+biomass+other generation in TWh from 1965 til 2018
-##### Biofuels Production - Ktoe > displays the oil production in Ktoe from 1990 til 2018
+##### Biofuels Production - Ktoe > displays the biofuels production in Ktoe from 1990 til 2018
 ##### Carbon Dioxide Emissions > displays the carbon emission in Million tonnes from 1965 til 2018
