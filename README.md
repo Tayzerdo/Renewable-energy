@@ -1,10 +1,8 @@
 # Renewable-energy
 
-## This project is based on study of energy based on the BP statistical review.
+## This project is based on a statistical analysis regarding the correlation between the nine types of energy (Biofuel, Coal, Gas, Hydro, Nuclear, Oil, Other, Solar, Wind) with the carbon emission and their correlation based on the yearly production data that is taken from the BP statistical review 
 
 webiste - https://www.bp.com/content/dam/bp/business-sites/en/global/corporate/xlsx/energy-economics/statistical-review/bp-stats-review-2019-all-data.xlsx
-
-
 
 ## The file has sort of energy information: the ones used for this project is:
 
